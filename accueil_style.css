@@ -9,6 +9,11 @@ a {
   color: inherit;
 }
 
+a:hover {
+	text-decoration: none;
+	color: #57b846;
+}
+
 ul{
   list-style: none;
 }
@@ -65,6 +70,25 @@ body {
 
 }
 
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+ 
+  border-radius: 10px;
+  margin-top:10px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+  
+}
+
 #button {
   background-color: #A9DB3F;
   border-radius: 50px;
@@ -116,5 +140,72 @@ body {
   font-size: 20px;
   font-weight : 650;
   
+}
+
+@media screen and (max-width: 1024px) {
+  .logo {
+    width: 150px;
+  }
+
+  .slide-text {
+    padding: 250px;
+    padding-left: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 120px;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .slide-text {
+    padding: 200px;
+    padding-left: 25px;
+    font-size: 2rem;
+  }
+
+  .slide-text p {
+    font-size: 1.5rem;
+  }
+
+  .slide-text h1 {
+    font-size: 4rem;
+  }
+
+  #more-info {
+    bottom: -100px;
+    left: 550px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    width: 100px;
+  }
+
+  .slide-text {
+    padding: 150px;
+    padding-left: 10px;
+    font-size: 1.5rem;
+  }
+
+  .slide-text p {
+    font-size: 1.2rem;
+  }
+
+  .slide-text h1 {
+    font-size: 3rem;
+  }
+
+  #more-info {
+    bottom: -75px;
+    left: 225px;
+    font-size: 14px;
+  }
 }
 
