@@ -1,11 +1,11 @@
-const headerEl = document.querySelector(".header");
+const headerEl = document.querySelector(".navbar");
 
 window.addEventListener('scroll', () =>{
   if(window.scrollY>50){
-    headerEl.classList.add('header-scrolled');
+    headerEl.classList.add('navbar-scrolled');
 
   }else if(window.scrollY<=50){
-    headerEl.classList.remove('header-scrolled');
+    headerEl.classList.remove('navbar-scrolled');
   }
 
 });
