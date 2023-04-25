@@ -1,3 +1,8 @@
+window.onload = function() {
+  document.body.classList.add('body');
+};
+
+
 var TrandingSlider = new Swiper('.tranding-slider', {
     effect: 'coverflow',
     grabCursor: true,
