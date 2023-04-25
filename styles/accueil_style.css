@@ -46,7 +46,7 @@ body {
     width: 100%;
     transition: all 0.5s;
     font-weight : 650;
-    
+    z-index: 1;
 }
 
 .navbar-scrolled{
