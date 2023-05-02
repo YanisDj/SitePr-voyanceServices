@@ -5,6 +5,23 @@
 }
 
 
+::-webkit-scrollbar {
+  width: 0.9rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: #797979;
+  transition: all 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #222224;
+}
+
+::-webkit-scrollbar-track {
+  background: #f9f9f9;
+}
 /*NAVBAR*/
 
 .navbar{
@@ -145,7 +162,7 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to bottom, #33383b, #868686);
+    background: linear-gradient(to bottom, #A9DB3F, #e2ead1);
     color: white;
 
 }
@@ -295,11 +312,11 @@
 .footer-distributed .footer-links .link-1:before {
   content: none;
 }
-
 /* Footer Right */
 
 .footer-distributed .footer-right{
 	width: 20%;
+  margin-top: 20px;
 }
 
 .footer-distributed .footer-company-about{
