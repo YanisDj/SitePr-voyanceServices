@@ -296,20 +296,19 @@ width: 50px;
   position: absolute;
   bottom: 2rem;
   left: 2rem;
-  color: var(--white);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 15px;
+  padding-left: 10px;
 }
 
 .assurance-name{
-    color: #ec994b;
+    color: black;
 }
 
-.description {
-  padding-top: 1rem;
-  display: flex;
-  gap: 1rem;
-  font-size: 1em;
-  color: #ec994b;
-}
+
 
 .swiper-slide-shadow-left,
 .swiper-slide-shadow-right {

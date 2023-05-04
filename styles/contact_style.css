@@ -149,6 +149,43 @@ width: 50px;
   font-weight: 600;
 }
 
+.contact1-pic ul{
+	color: black;
+	list-style-type: disc;
+	font-weight: 600;
+	
+  }
+
+.text{
+	display: none;
+	
+	
+}
+
+@media screen and (max-width: 900px) {
+	
+    .text {
+        display: block;
+		text-align: center;
+		padding: 40px;
+		margin: 20px;
+		margin-top: 180px;
+		border-radius: 10px;
+		background-color: #a2a39f;
+		
+    }
+	.text h2 {
+        font-weight: 600;
+		padding-bottom: 15px;
+    }
+	.text p {
+        font-weight: 400;
+		color: white;
+    }
+}
+
+  
+
 
 
 
