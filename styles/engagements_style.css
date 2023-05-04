@@ -148,59 +148,33 @@
 }
 
 /* General styles */
-.engagements{
-  padding: 4rem 0;
-  margin-top: 80px;
-  font-size: 1.6rem;
+.engagements {
+  background-color: #f7f7f7;
+  padding: 50px 0;
+  margin-top: 150px;
 }
+
 .container {
-    max-width: 1000px;
-    margin: 0 auto;
-	  padding: 50px 20px;
-    text-align: center;
-    background-color: #f5f5f5;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to bottom, #A9DB3F, #e2ead1);
-    color: white;
-
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.container h1{
+.engagements h1 {
   font-size: 2em;
-  padding-bottom: 30px;
-  font-weight: 600;
-  color: #ec994b;
+  margin: 0;
 }
 
+.engagements img {
+  height: 50px;
+}
 
-.engagement {
-    margin-bottom: 30px;
+.engagements {
+  margin-bottom: 30px;
 }
 
 .engagement h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #ec994b;
-    text-decoration: underline;
-}
+  font-size : 1.5em
 
-.engagement p {
-    font-size: 16px;
-    line-height: 1.4;
-    margin-bottom: 20px;
-    
-}
-
-.engagement a{
-  text-decoration: none;
-  color: white;
-}
-
-.engagement a:hover{
-  color: #57b846;
-  
 }
 
 
