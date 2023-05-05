@@ -149,32 +149,91 @@
 
 /* General styles */
 .engagements {
-  background-color: #f7f7f7;
-  padding: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 150px;
+  margin-bottom: 20px;
+  
+}
+
+.engagement {
+  flex-basis: 48%;
+  margin-bottom: 2rem;
+  margin-top: 10px;
+}
+
+.engagement a {
+  text-decoration: none;
+  font-style: italic;
+  font-weight: 600;
+  color : whitesmoke;
+}
+
+.engagement a:hover {
+  color : blue
+}
+
+.engagement img {
+  flex-basis: 48%;
+  margin-left: 2%;
+}
+
+.engagement p {
+ font-size: 1.1em;
 }
 
 .container {
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
+  padding: 2rem;
+  border-radius: 10px;
+  padding: 10px;
+  background: linear-gradient(15deg, #91bfdc 0%, #22646e 150%);
 }
 
-.engagements h1 {
-  font-size: 2em;
-  margin: 0;
+@media (max-width: 768px) {
+  .engagements {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .engagement {
+    flex-basis: 100%;
+  }
+  
+  .engagement img {
+    flex-basis: 100%;
+    margin-left: 0;
+    margin-top: 2rem;
+  }
 }
 
-.engagements img {
-  height: 50px;
+.container h2{
+  padding: 5px;
+}
+.container h1 {
+  text-align: center;
+  overflow: hidden; 
+  white-space: nowrap; /* empêche le texte de se diviser en plusieurs lignes */
+  margin: 0 auto; /* centre le titre */
+  letter-spacing: .15em; /* espace entre les lettres */
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
 }
 
-.engagements {
-  margin-bottom: 30px;
+/* animation d'écriture */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
 }
 
-.engagement h2 {
-  font-size : 1.5em
-
+/* effet de clignotement */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+ 
 }
 
 
