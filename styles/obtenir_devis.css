@@ -59,6 +59,7 @@
   transition: all 0.5s;
   font-weight : 650;
   top: 0; 
+  
 }
 .navbar a {
 text-decoration: none;
@@ -268,33 +269,36 @@ width: 50px;
   }
 
 
-
-
-
-
-
-
-
-
-
-
-
 /* COOKIES*/
 
 #cookie-consent {
   position: fixed;
+  color: white;
   bottom: 0;
   left: 0;
-  width: 20%;
+  width: 100%;
   padding: 10px;
-  background-color: #f8f8f8;
-  border-top: 1px solid #ddd;
-  text-align: left;
+  background-color: #33383b;
+  border-top: 1px solid #33383b;
+  text-align: center;
   z-index: 9999;
 }
 
+#cookie-consent a{
+  color: white;
+}
+
 #cookie-accept, #cookie-reject {
+  border-radius: 10px;
+  background-color: white;
   margin: 0 10px;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+#cookie-accept {
+  background-color: #A9DB3F;
 }
 
 /*FIN COOKIES

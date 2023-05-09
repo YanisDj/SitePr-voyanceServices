@@ -158,8 +158,6 @@ width: 50px;
 
 .text{
 	display: none;
-	
-	
 }
 
 @media screen and (max-width: 900px) {
@@ -169,7 +167,8 @@ width: 50px;
 		text-align: center;
 		padding: 40px;
 		margin: 20px;
-		margin-top: 180px;
+		margin-top: 140px;
+		
 		border-radius: 10px;
 		background-color: #a2a39f;
 		
@@ -182,6 +181,7 @@ width: 50px;
         font-weight: 400;
 		color: white;
     }
+	
 }
 
   
