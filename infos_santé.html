@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-	<title>Contact V1</title>
+	<title>Assurance Santé - PREVOYANCE SERVICES</title>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="contactFrom/images/icons/favicon.ico"/>
-<!--===============================================================================================-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+
 	<link rel="stylesheet" type="text/css" href="contactFrom/vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
+
 	<link rel="stylesheet" type="text/css" href="contactFrom/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
+
 	<link rel="stylesheet" type="text/css" href="contactFrom/vendor/animate/animate.css">
-<!--===============================================================================================-->
+
 	<link rel="stylesheet" type="text/css" href="contactFrom/vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
+
 	<link rel="stylesheet" type="text/css" href="contactFrom/vendor/select2/select2.min.css">
-<!--===============================================================================================-->
+
 	<link rel="stylesheet" type="text/css" href="contactFrom/css/util.css">
 	<link rel="stylesheet" type="text/css" href="contactFrom/css/main.css">
 	<link rel="stylesheet" href="styles/contact_style.css">
-<!--===============================================================================================-->
+
 </head>
 <body>
 	<nav class="navbar">
@@ -32,6 +35,7 @@
 		  </li>
 		  <li class="link-item dropdown">
 			<a href="#" class="link">Produits</a>
+			<i class="fa fa-caret-down"></i>
 			<ul class="dropdown-menu">
 			  <li><a href="particuliers.html">Particuliers</a></li>
 			  <li><a href="professionnels.html">Professionnels</a></li>
@@ -76,7 +80,7 @@
                     LOI : La loi concernant la résiliation infra-annuelle réformant les complémentaires santé entre en vigueur le 1er décembre 2020. Elle impacte vos clients Professionnels et Particuliers. Elle permet aux assurés de résilier, après un an de souscription, leur contrat de complémentaire santé, à tout moment, sans frais ni pénalité.</p>
 			</div>
 
-			<form class="contact1-form validate-form">
+			<form class="contact1-form validate-form" method="POST" action="back/send_santé.php">
 				<span class="contact1-form-title">
 					Devis Complémentaire Santé
 				</span>
@@ -116,14 +120,14 @@
 
 
 
-<!--===============================================================================================-->
+
 	<script src="contactFrom/vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
+
 	<script src="contactFrom/vendor/bootstrap/js/popper.js"></script>
 	<script src="contactFrom/vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
+
 	<script src="contactFrom/vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
+
 	<script src="contactFrom/vendor/tilt/tilt.jquery.min.js"></script>
 	<script >
 		$('.js-tilt').tilt({
@@ -131,19 +135,19 @@
 		})
 	</script>
 
-<!--===============================================================================================-->
+
 	<script src="contactFrom/js/main.js"></script>
 	<footer class="footer-distributed">
 		<div class="footer-left">
 		  <img class="logo" src="src/logo_siteweb.png" alt="Logo Prevoyance Service">
 		  <p class="footer-links">
-			<a href="#" class="link-1">Home</a>
-			<a href="#">Particuliers</a>
-			<a href="#">Professionnels</a>
-			<a href="#">Engagements</a>
-			<a href="#">Contact</a>
-			<a href="#">Obtenir un devis</a>
-			<a href="#">Mention légales</a>
+			<a href="index.html" class="link-1">Home</a>
+			<a href="particuliers.html">Particuliers</a>
+			<a href="professionnels.html">Professionnels</a>
+			<a href="engagements.html">Engagements</a>
+			<a href="contact.html">Contact</a>
+			<a href="obtenir_devis.html">Obtenir un devis</a>
+			<a href="mention_légales.html">Mention légales</a>
 		  </p>
 		  
 		</div>

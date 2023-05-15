@@ -1,55 +1,51 @@
-function setCookie(name, value, days) {
-    var expires = "";
-    if (days) {
-      var date = new Date();
-      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-      expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + (value || "") + expires + "; path=/";
-  }
+// Récupération des éléments du DOM
+const cookieBanner = document.getElementById("cookie-consent");
+const acceptButton = document.getElementById("cookie-accept");
+const rejectButton = document.getElementById("cookie-reject");
+
+// Fonction pour masquer la bannière de cookies
+function hideCookieBanner() {
+  cookieBanner.style.display = "none";
+}
+
+// Gestionnaire d'événement pour le clic sur le bouton Accepter
+acceptButton.addEventListener("click", function() {
+  hideCookieBanner();
+  activateGoogleAnalytics();
+});
+
+// Gestionnaire d'événement pour le clic sur le bouton Refuser
+rejectButton.addEventListener("click", function() {
+  hideCookieBanner();
+});
+
+// Vérification au chargement de la page si l'utilisateur a déjà fait un choix sur les cookies
+if (localStorage.getItem("cookieChoice")) {
+  hideCookieBanner();
+}
+
+// Fonction pour enregistrer le choix de l'utilisateur sur les cookies
+function saveCookieChoice(choice) {
+  localStorage.setItem("cookieChoice", choice);
+}
+
+// Fonction pour activer Google Analytics
+function activateGoogleAnalytics() {
+  // Remplacez "UA-XXXXXXXXX-X" par votre propre code de suivi Google Analytics
+  const trackingId = "UA-XXXXXXXXX-X";
   
-  // Fonction pour récupérer la valeur d'un cookie
-  function getCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for (var i = 0; i < ca.length; i++) {
-      var c = ca[i];
-      while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-    }
-    return null;
-  }
+  // Insertion du script de suivi Google Analytics
+  const script = document.createElement("script");
+  script.setAttribute("async", "");
+  script.setAttribute("src", `https://www.googletagmanager.com/gtag/js?id=${trackingId}`);
+  document.head.appendChild(script);
   
-  // Fonction pour charger Google Analytics
-  function loadGoogleAnalytics() {
-    // Remplacez 'GA_MEASUREMENT_ID' par votre identifiant de suivi Google Analytics
-    var GA_MEASUREMENT_ID = 'GA_MEASUREMENT_ID';
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', GA_MEASUREMENT_ID);
-  }
+  // Initialisation de Google Analytics
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", trackingId);
   
-  // Fonction pour accepter les cookies
-  function acceptCookies() {
-    setCookie('cookie-consent', 'accepted', 365);
-    loadGoogleAnalytics();
-    document.getElementById('cookie-consent').style.display = 'none';
-  }
-  
-  // Fonction pour refuser les cookies
-  function rejectCookies() {
-    setCookie('cookie-consent', 'rejected', 365);
-    document.getElementById('cookie-consent').style.display = 'none';
-  }
-  
-  // Vérifier si le cookie a déjà été accepté ou refusé
-  if (getCookie('cookie-consent') === 'accepted') {
-    loadGoogleAnalytics();
-  } else if (getCookie('cookie-consent') === 'rejected') {
-    // Ne chargez pas Google Analytics
-  }
-  
-  // Ajouter des écouteurs d'événements aux boutons de consentement aux cookies
-  document.getElementById('cookie-accept').addEventListener('click', acceptCookies);
-  document.getElementById('cookie-reject').addEventListener('click', rejectCookies);
+  // Enregistrement du choix de l'utilisateur
+  saveCookieChoice("accept");
+}

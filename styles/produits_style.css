@@ -59,7 +59,7 @@ html {
 
 body{
     animation: fade-in 2s ease-in;
-    background: linear-gradient(15deg, #0f4667 0%, #2a6973 150%);
+    background: linear-gradient(15deg, #8e969b 0%, #b7c3c5 150%);
   }
   
 @keyframes fade-in {
@@ -88,6 +88,8 @@ body{
   left: 0;
   right: 0;
   z-index: 9999;
+  font-size: 1.1em;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   
   
 }
@@ -122,7 +124,7 @@ padding: 10px;
 .dropdown-menu {
 display: none;
 position: absolute;
-background-color: rgba(255, 255, 255, 0.5);
+background-color: #33383b;
 border-radius: 10px;
 margin-top:10px;
 z-index: 1;
@@ -205,6 +207,7 @@ width: 50px;
   max-width: 124rem;
   padding: 0 1rem;
   margin: 0 auto;
+  
 }
 
 .text-center {
@@ -394,6 +397,41 @@ width: 50px;
   background: var(--primary);
 }
 
+
+
+/* COOKIES*/
+
+#cookie-consent {
+  position: fixed;
+  color: white;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #33383b;
+  border-top: 1px solid #33383b;
+  text-align: center;
+  z-index: 9999;
+}
+
+#cookie-consent a{
+  color: white;
+}
+
+#cookie-accept, #cookie-reject {
+  border-radius: 10px;
+  background-color: white;
+  margin: 0 10px;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+#cookie-accept {
+  background-color: #A9DB3F;
+}
+
+/*FIN COOKIES
 
 
 /* FOOTER */

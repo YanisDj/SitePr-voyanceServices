@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-	<title>Contact V1</title>
+	<title>Assurance Décennale - PREVOYANCE SERVICES</title>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="icon" type="image/png" href="contactFrom/images/icons/favicon.ico"/>
-
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
 	<link rel="stylesheet" type="text/css" href="contactFrom/vendor/bootstrap/css/bootstrap.min.css">
 
 	<link rel="stylesheet" type="text/css" href="contactFrom/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -32,6 +34,7 @@
 		  </li>
 		  <li class="link-item dropdown">
 			<a href="#" class="link">Produits</a>
+			<i class="fa fa-caret-down"></i>
 			<ul class="dropdown-menu">
 			  <li><a href="particuliers.html">Particuliers</a></li>
 			  <li><a href="professionnels.html">Professionnels</a></li>
@@ -77,7 +80,7 @@
                    Les dommages survenus après la réception des travaux, pendant une durée de 10 ans. Le délai démarre à la signature de la réception des travaux, lorsque le maître d'ouvrage déclare accepter l'ouvrage avec ou sans réserve. </p>
 			</div>
 
-			<form class="contact1-form validate-form">
+			<form class="contact1-form validate-form" method="POST" action="back/send_décenale.php">
 				<span class="contact1-form-title">
 					Devis Décennale
 				</span>
@@ -137,13 +140,13 @@
 		<div class="footer-left">
 		  <img class="logo" src="src/logo_siteweb.png" alt="Logo Prevoyance Service">
 		  <p class="footer-links">
-			<a href="#" class="link-1">Home</a>
-			<a href="#">Particuliers</a>
-			<a href="#">Professionnels</a>
-			<a href="#">Engagements</a>
-			<a href="#">Contact</a>
-			<a href="#">Obtenir un devis</a>
-			<a href="#">Mention légales</a>
+			<a href="index.html" class="link-1">Home</a>
+			<a href="particuliers.html">Particuliers</a>
+			<a href="professionnels.html">Professionnels</a>
+			<a href="engagements.html">Engagements</a>
+			<a href="contact.html">Contact</a>
+			<a href="obtenir_devis.html">Obtenir un devis</a>
+			<a href="mention_légales.html">Mention légales</a>
 		  </p>
 		  
 		</div>

@@ -22,6 +22,8 @@
 ::-webkit-scrollbar-track {
   background: #f9f9f9;
 }
+
+
 /*NAVBAR*/
 .navbar{
   display: flex;
@@ -160,6 +162,7 @@ width: 50px;
   flex-basis: 48%;
   margin-bottom: 2rem;
   margin-top: 10px;
+  
 }
 
 .engagement a {
@@ -173,11 +176,6 @@ width: 50px;
   color : blue
 }
 
-.engagement img {
-  flex-basis: 48%;
-  margin-left: 2%;
-}
-
 .engagement p {
  font-size: 1.1em;
 }
@@ -188,10 +186,12 @@ width: 50px;
   padding: 2rem;
   border-radius: 10px;
   padding: 10px;
-  background: linear-gradient(15deg, #91bfdc 0%, #22646e 150%);
+  background: linear-gradient(15deg, #8e969b 0%, #b7c3c5 150%);
 }
 
-@media (max-width: 768px) {
+
+
+@media (max-width: 900px) {
   .engagements {
     flex-direction: column;
     align-items: stretch;
@@ -235,6 +235,39 @@ width: 50px;
 }
 
 
+/* COOKIES*/
+
+#cookie-consent {
+  position: fixed;
+  color: white;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #33383b;
+  border-top: 1px solid #33383b;
+  text-align: center;
+  z-index: 9999;
+}
+
+#cookie-consent a{
+  color: white;
+}
+
+#cookie-accept, #cookie-reject {
+  border-radius: 10px;
+  background-color: white;
+  margin: 0 10px;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+#cookie-accept {
+  background-color: #A9DB3F;
+}
+
+/*FIN COOKIES
 
 /* FOOTER */
 .footer-distributed{
