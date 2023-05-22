@@ -1,9 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 *{
     padding : 0;
     margin : 0;
     box-sizing: border-box;
 }
 
+html{
+  font-family: 'Montserrat', sans-serif;
+  
+}
 
 ::-webkit-scrollbar {
   width: 0.9rem;
@@ -37,6 +42,7 @@
   transition: all 0.5s;
   font-weight : 650;
   top: 0; 
+  
 }
 .navbar a {
 text-decoration: none;
@@ -116,17 +122,17 @@ width: 50px;
 .nav-links {
   
   top: 0;
-  left: 0;
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0.20);
-  backdrop-filter: blur(7px);
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: -100%;
-  transition: all 0.5s ease;
+    left: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.508);
+    backdrop-filter: blur(7px);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -100%;
+    transition: all 0.5s ease;
   
 }
 
@@ -142,7 +148,7 @@ width: 50px;
 .navbar .nav-links ul li {
   margin: 15px 0;
   font-size: 1.2em;
-  color: black;
+  color: white;
   font-weight: bold;
 }
 }
@@ -151,33 +157,30 @@ width: 50px;
 .engagements {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  align-items: flex-start; /* Modifié pour aligner le texte à gauche */
   margin-top: 150px;
   margin-bottom: 20px;
-  
 }
 
 .engagement {
   flex-basis: 48%;
   margin-bottom: 2rem;
   margin-top: 10px;
-  
 }
 
 .engagement a {
   text-decoration: none;
   font-style: italic;
   font-weight: 600;
-  color : whitesmoke;
+  color: whitesmoke;
 }
 
 .engagement a:hover {
-  color : blue
+  color: blue;
 }
 
 .engagement p {
- font-size: 1.1em;
+  font-size: 1.1em;
 }
 
 .container {
@@ -186,10 +189,43 @@ width: 50px;
   padding: 2rem;
   border-radius: 10px;
   padding: 10px;
-  background: linear-gradient(15deg, #8e969b 0%, #b7c3c5 150%);
+  background: linear-gradient(15deg, #98ca2c 0%, #a6ce50 150%);
+  justify-content: center;
 }
 
+.container h2 {
+  padding: 5px;
+}
 
+.container h1 {
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+.img-centered {
+  display: block;
+  margin: 0 auto;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+}
 
 @media (max-width: 900px) {
   .engagements {
@@ -206,33 +242,13 @@ width: 50px;
     margin-left: 0;
     margin-top: 2rem;
   }
+
+  .container h1{
+    white-space: normal;
+  }
 }
 
-.container h2{
-  padding: 5px;
-}
-.container h1 {
-  text-align: center;
-  overflow: hidden; 
-  white-space: nowrap; /* empêche le texte de se diviser en plusieurs lignes */
-  margin: 0 auto; /* centre le titre */
-  letter-spacing: .15em; /* espace entre les lettres */
-  animation:
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
-}
 
-/* animation d'écriture */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* effet de clignotement */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
- 
-}
 
 
 /* COOKIES*/
@@ -379,14 +395,14 @@ width: 50px;
 /* Footer Right */
 
 .footer-distributed .footer-right{
-	width: 20%;
-  margin-top: 20px;
+	width: 24%;
+  margin-top: 25px;
 }
 
 .footer-distributed .footer-company-about{
-	line-height: 20px;
+	line-height: 22px;
 	color:  #92999f;
-	font-size: 13px;
+	font-size: 15px;
 	font-weight: normal;
 	margin: 0;
 }

@@ -2,10 +2,11 @@
 
 require_once 'PHPMailer-5.2-stable/PHPMailerAutoload.php';
 if (isset($_POST['submit'])) {
-    $to = 'contact@prevoyanceservices.com';
+    $to = 'yanisdjahnit0333@gmail.com';
+    $from = 'yanisdjahnit0333@gmail.com';
     $subject = htmlentities($_POST['sujet'], ENT_QUOTES);
     $name = htmlentities($_POST['name'], ENT_QUOTES);
-    $from = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $message = htmlentities($_POST['message'], ENT_QUOTES);
     $phone = htmlentities($_POST['telephone'], ENT_QUOTES); 
 
@@ -15,7 +16,7 @@ if (isset($_POST['submit'])) {
     try {
         // Configure les paramètres du serveur SMTP
         $mail->isSMTP();
-        $mail->Host = 'smtp.example.com';
+        $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'user@example.com';
         $mail->Password = 'password';
@@ -27,7 +28,7 @@ if (isset($_POST['submit'])) {
         $mail->addAddress($to);
         $mail->isHTML(true);
         $mail->Subject = $subject;
-        $mail->Body = "Nom: $name <br> Email: $from <br> Téléphone: $phone <br> Message: <br> $message";
+        $mail->Body = "Nom: $name <br> Email: $email <br> Téléphone: $phone <br> Message: <br> $message";
 
         // Envoie le message
         $mail->send();

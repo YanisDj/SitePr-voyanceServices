@@ -11,12 +11,14 @@
     <link rel="manifest" href="favicon/site.webmanifest">
     <link rel="stylesheet" href="styles/accueil_style.css">
     <link rel="stylesheet" type="text/css" href="contactFrom/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    
     
   </head>
   <body>
       
         <nav class="navbar">
-        <img class="logo" src="src/logo_siteweb.png" alt="Logo Prevoyance Service">
+        <a href="index.html" ><img class="logo" src="src/logo_siteweb.png" alt="Logo Prevoyance Service"></a>
         <div class="nav-links">
         <ul class="links">
           <li class="link-item">
@@ -46,11 +48,11 @@
       <header></header>
 
     
-      <section class="principal">
+      <section class="principal" >
       <img class="img_accueil" src="src/accueil/facade_prevoyance_service.jpg" alt="Façade de Prevoyance Services">
       </section>
 
-    <section class="partenaires">
+    <section class="partenaires" data-aos="fade-up">
       <h2>Nos partenaires</h2>
         <div class="slider">
           <div class="slide-track">
@@ -99,12 +101,24 @@
         </div>
     </section>
 
-    <section class="about">
+    <section class="offre" data-aos="fade-up">
+        <div class="promo"> Notre offre du moment Chez April - Faites jusqu'à 15 000 € d'économie !</div>
+        <a class="parrainage" href="https://www.april-on.fr/landings/parrainage">PARRAINER</a>
+        <img src="src\accueil\april_logo_.jpg" alt="Logo April" class="logo_april">
+        <a class="comparateur" href="https://comparer-assurance-pret.april.fr?LI=2B5E4F7F-2318-4934-87E4-F23828308F90&CO=CO:69601&canal=ebusiness&nohf=true&AON_ID=WndEem9ta0N3K1NZYklIWEVwVTBSUT09">SIMULATEUR ASSURANCE PRÊT IMMOBILIER</a>
+
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <section class="about" data-aos="fade-up">
       <div class="main">
-        <img src="src\accueil\C'est_quoi_un_courtier_assurance.jpg" alt="">
+        <img src="src\homme-costume-cravate-bleue-chem.jpg" alt="Courtier Assurance">
           <div class="about-text">
             <h1>Qu'est-ce qu'un courtier en assurances ? </h1>
-            <h3>Foudil Ait Chabane est courtier en assurance depuis plus de 20 ans.</h5>
+            
             <h5>Son agence est située a Gennevilliers. </h5>
             <p>Le courtier en assurances est un intermédiaire spécialisé sur le conseil en assurance, en prévoyance et en mutuelle.</p>
             <p>Il est indépendant et mandaté par ses client.e.s pour lui apporter les meilleurs conseils et lui proposer une offre adaptée à ses besoins.</p>
@@ -113,12 +127,13 @@
             <p>Vous pouvez venir nous rencontrer dans notre agence ou directement nous contacter sur ce site Web ou faire une demande de devis.</p>  
             <p>Toutes les données que vous nous transmettez sont réservées à notre usage exclusif.
               En aucun cas, nous ne revendons toutes ces informations.</p>
-            <button type="button" class="contactez-nous">Nous contactez</button>
+            <a href="contact.html"><button type="button" class="contactez-nous">Nous contactez </a></button>
           </div>
 
       </div>
+    
     </section>
-
+    
     
 
 
@@ -149,7 +164,7 @@
           <div class="footer-center">
             <div>
               <i class="fa fa-map-marker"></i>
-              <p><span>78 rue Pierre Timbaud</span> Gennevilliers, France</p>
+              <p><a href="https://www.google.com/maps/place/78+rue+Pierre+Timbaud,+Gennevilliers,+France">78 rue Pierre Timbaud Gennevilliers, France</a></p>
             </div>
             <div>
               <i class="fa fa-phone"></i>
@@ -167,12 +182,11 @@
               <br>N°ORIAS : 08044525
               <br>SARL au capital de 7 600,00 €
               <br>SIRET : 503 991 465 00017
-              <br>RCS BOBIGNY B 503 991 465 - 1998/23</p>
+              <br>RCS NANTERRE B 503 991 465 - 1998/23</p>
             <div class="footer-icons">
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <a href="#"><i class="fa fa-twitter"></i></a>
+            
               <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="#"><i class="fa fa-github"></i></a>
+              
             </div>
           </div>
         </footer>

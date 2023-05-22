@@ -2,6 +2,11 @@
 const cookieBanner = document.getElementById("cookie-consent");
 const acceptButton = document.getElementById("cookie-accept");
 const rejectButton = document.getElementById("cookie-reject");
+const cookieSettingsButton = document.getElementById("cookie-settings");
+
+
+
+
 
 // Fonction pour masquer la bannière de cookies
 function hideCookieBanner() {
@@ -32,7 +37,7 @@ function saveCookieChoice(choice) {
 // Fonction pour activer Google Analytics
 function activateGoogleAnalytics() {
   // Remplacez "UA-XXXXXXXXX-X" par votre propre code de suivi Google Analytics
-  const trackingId = "UA-XXXXXXXXX-X";
+  const trackingId = "G-CXLCG7ZV6P";
   
   // Insertion du script de suivi Google Analytics
   const script = document.createElement("script");

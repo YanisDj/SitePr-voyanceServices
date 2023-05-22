@@ -1,7 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 * {
   padding : 0;
   margin : 0;
   box-sizing: border-box;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
 }
 
 a {
@@ -52,6 +57,7 @@ ul{
     transition: all 0.5s;
     font-weight : 650;
     z-index: 99999;
+    
 }
 
 .navbar-scrolled{
@@ -77,7 +83,7 @@ ul{
 .dropdown-menu {
   display: none;
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #33383b;
  
   border-radius: 10px;
   margin-top:10px;
@@ -130,7 +136,7 @@ ul{
     top: 0;
     left: 0;
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.20);
+    background-color: rgba(0, 0, 0, 0.508);
     backdrop-filter: blur(7px);
     width: 100%;
     height: 100vh;
@@ -154,7 +160,7 @@ ul{
   .navbar .nav-links ul li {
     margin: 40px 0;
     font-size: 1.4em;
-    color: black;
+    color: white;
     font-weight: bold;
   }
   
@@ -164,7 +170,7 @@ ul{
 }
 /*FIN NAVBAR*/
 .principal {
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 .principal .img_accueil{
   width: 100%;
@@ -172,9 +178,13 @@ ul{
   object-fit: cover;
   z-index: -1;
   opacity: 0.9;
+  
 }
 
 /*PARTENAIRE*/
+.partenaires {
+  padding-bottom: 100px;
+}
 .partenaires h2{
   text-align: center;
   font-size: 2em;
@@ -235,6 +245,61 @@ ul{
   width: 250px;
 }
 
+/*OFFRE*/
+.offre {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: .14em;
+  
+}
+[data-aos="fade-up"] {
+  transition-property: opacity, transform;
+  transition-duration: 0.5s;
+}
+
+
+
+.promo {
+  flex-basis: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.7em;
+  
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #A9DB3F;
+  padding: 30px;
+  margin: 40px;
+}
+
+.parrainage {
+  color: white;
+  flex-basis: 20%;
+  text-align: center;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #33383b;
+  padding: 25px;
+  margin: 25px;
+}
+
+.comparateur {
+  color: white;
+  flex-basis: 20%;
+  text-align: center;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #33383b;
+  padding: 25px;
+  margin: 25px;
+}
+
+.logo_april {
+  width: 400px;
+}
+
 /*TEST*/
 .about{
   width: 100%;
@@ -258,7 +323,7 @@ ul{
   align-items: center;
   justify-content: space-around;
   border-radius: 10px;
-  background: linear-gradient(15deg, #8e969b 0%, #b7c3c5 150%);
+  /*background: linear-gradient(15deg, #8e969b 0%, #b7c3c5 150%);*/
   padding: 20px;
 }
 
@@ -298,6 +363,7 @@ ul{
   text-decoration: none;
   border: 2px solid transparent;
   font-weight: bold;
+  margin-top: 15px;
   padding: 10px 25px;
   border-radius: 25px;
 }
@@ -483,14 +549,14 @@ ul{
 /* Footer Right */
 
 .footer-distributed .footer-right{
-	width: 20%;
-  margin-top: 20px;
+	width: 24%;
+  margin-top: 25px;
 }
 
 .footer-distributed .footer-company-about{
-	line-height: 20px;
+	line-height: 22px;
 	color:  #92999f;
-	font-size: 13px;
+	font-size: 15px;
 	font-weight: normal;
 	margin: 0;
 }
