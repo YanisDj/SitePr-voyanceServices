@@ -54,3 +54,8 @@ function activateGoogleAnalytics() {
   // Enregistrement du choix de l'utilisateur
   saveCookieChoice("accept");
 }
+
+function showSpinner() {
+  document.getElementById('submit-button').style.display = 'none';
+  document.getElementById('spinner').style.display = 'inline-block';
+}

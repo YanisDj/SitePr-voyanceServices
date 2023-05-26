@@ -1,10 +1,10 @@
 const headerEl = document.querySelector(".navbar");
 
 window.addEventListener('scroll', () =>{
-  if(window.scrollY>50){
+  if(window.scrollY>100){
     headerEl.classList.add('navbar-scrolled');
 
-  }else if(window.scrollY<=50){
+  }else if(window.scrollY<=100){
     headerEl.classList.remove('navbar-scrolled');
   }
 

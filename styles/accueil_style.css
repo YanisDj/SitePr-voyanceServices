@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
 * {
   padding : 0;
   margin : 0;
@@ -50,7 +51,7 @@ ul{
     display: flex;
     align-items: center;
     justify-content:space-between;
-    padding: 20px 30px;
+    padding: 15px 25px;
     color: white;
     position: fixed;
     width: 100%;
@@ -58,12 +59,13 @@ ul{
     font-weight : 650;
     z-index: 99999;
     
+    
 }
 
 .navbar-scrolled{
   background-color: #33383b;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-  padding: 10px;
+  padding: 20px 30px;
 }
 
 .logo{
@@ -171,11 +173,44 @@ ul{
 /*FIN NAVBAR*/
 .principal {
   padding-bottom: 100px;
+  position: relative;
+}
+.texte_image {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #33383b;
+  font-size: 1.5rem;
+
+
+opacity: 0; /* Définit l'opacité initiale à 0 */
+
+  /* Animation d'écriture */
+  animation-name: writing-animation;
+  animation-duration: 2s;
+  animation-delay: 1s; /* Définit le délai avant le démarrage de l'animation */
+  animation-fill-mode: forwards; /* Garde l'état final de l'animation après la fin */
+
+  /* Autres styles... */
+}
+
+@keyframes writing-animation {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scaleY(0.1); /* Commence avec une hauteur nulle */
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scaleY(1); /* Termine avec une hauteur complète */
+  }
 }
 .principal .img_accueil{
   width: 100%;
   height: 100vh;
   object-fit: cover;
+  object-position: center;
   z-index: -1;
   opacity: 0.9;
   
@@ -446,7 +481,7 @@ ul{
 	width: 100%;
 	text-align: left;
 	font: bold 16px sans-serif;
-	padding: 55px 50px;
+	padding: 30px 50px;
   position: absolute;
 }
 
@@ -478,6 +513,7 @@ ul{
   font-weight:400;
 	text-decoration: none;
 	color:  inherit;
+  
 }
 
 .footer-distributed .footer-company-name{
@@ -518,6 +554,7 @@ ul{
   font-weight:400;
 	vertical-align: middle;
 	margin:0;
+  font-style: italic;
 }
 
 .footer-distributed .footer-center p span{
@@ -528,9 +565,12 @@ ul{
 }
 
 .footer-distributed .footer-center p a{
-	color:  lightseagreen;
-	text-decoration: none;;
+	color:  #fff;
+	text-decoration: none;
+  
 }
+
+
 
 .footer-distributed .footer-links a:before {
   content: "/";

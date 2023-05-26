@@ -108,7 +108,7 @@ list-style: none;
 }
 
 .navbar .logo{
-  width: 130px;
+  width: 160px;
 }
 
 .links{
@@ -223,7 +223,7 @@ width: 50px;
 
 #tranding {
   padding: 4rem 0;
-  margin-top: 80px;
+  margin-top: 90px;
   font-size: 1.6rem;
   
 }
@@ -443,7 +443,7 @@ width: 50px;
 	width: 100%;
 	text-align: left;
 	font: bold 16px sans-serif;
-	padding: 55px 50px;
+	padding: 30px 50px;
   position: absolute;
 
 }
@@ -530,8 +530,9 @@ width: 50px;
 }
 
 .footer-distributed .footer-center p a{
-	color:  lightseagreen;
-	text-decoration: none;;
+	color:  #ffffff;
+	text-decoration: none;
+  font-style: italic;
 }
 
 .footer-distributed .footer-links a:before {
