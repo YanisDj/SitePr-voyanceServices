@@ -234,7 +234,11 @@
 	
 }
 
- 
+.g-recaptcha{
+	justify-content: center;
+	text-align: center;
+	padding: 20px;
+}
 /* COOKIES*/
 
 #cookie-consent {

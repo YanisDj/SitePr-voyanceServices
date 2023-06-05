@@ -13,17 +13,16 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">	
 	<link rel="stylesheet" type="text/css" href="contactFrom/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-	
 	<link rel="stylesheet" type="text/css" href="contactFrom/css/main.css">
 	<link rel="stylesheet" href="styles/contact_style.css">
-	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.css">
+  	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.all.min.js"></script>
 	
 </head>
 <body>
 	<nav class="navbar">
-        <a href="index.html" ><img class="logo" src="src\logo-siteweb.webp" alt="Logo Prevoyance Service Assurance Gennevilliers"></a>
+        <a href="index.html" ><img class="logo" src="src/logo-siteweb.webp" alt="Logo Prevoyance Service Assurance Gennevilliers"></a>
         <div class="nav-links">
         <ul class="links">
           <li class="link-item">
@@ -48,12 +47,12 @@
           </li>
         </ul>
       </div>
-      <img src="src\menu.webp" alt="menu hamburger" class="menu-hamburger">
+      <img src="src/menu.webp" alt="menu hamburger" class="menu-hamburger">
       </nav>
 	<div class="contact1">
 		<div class="container-contact1">
 			<div class="contact1-pic js-tilt" data-tilt>
-				<img src="src\logo-siteweb.webp" alt="Logo Devis Assurance">
+				<img src="src/logo-siteweb.webp" alt="Logo Devis Assurance">
 				<p>L’utilisation des données est réservée à l'usage exclusif de PREVOYANCE SERVICES. Conformément au « RGPD » (règlement UE 2016/679 du 27 avril 2016), vous disposez d'un droit d'accès et de rectification aux données personnelles vous concernant. Ces droits peuvent être exercés en écrivant à : agence@prevoyanceservices.fr</p>
 			</div>
 			
@@ -86,8 +85,7 @@
 					<textarea class="input1" name="message" placeholder="Message"></textarea>
 					<span class="shadow-input1"></span>
 				</div>
-				
-				<div class="container-contact1-form-btn">
+					
 					<button class="contact1-form-btn" name="submit"  type="submit">
 						<span>
 							Envoyer
@@ -128,12 +126,13 @@
 	<script  src="scripts/accueil.js"></script>
 	<footer class="footer-distributed">
 		<div class="footer-left">
-			<img class="logo" src="src\logo-siteweb.webp" alt="Logo Prevoyance Service">
+			<img class="logo" src="src/logo-siteweb.webp" alt="Logo Prevoyance Service">
 			<p class="footer-links">
 				<a href="index.html" class="link-1">Home</a>
 				<a href="particuliers.html">Particuliers</a>
 				<a href="professionnels.html">Professionnels</a>
 				<a href="engagements.html">Engagements</a>
+				<br>
 				<a href="contact.html">Contact</a>
 				<a href="obtenir_devis.html">Obtenir un devis</a>
 				<a href="mention_légales.html">Mention légales</a>
@@ -164,11 +163,52 @@
 				<br>RCS NANTERRE B 503 991 465 - 1998/23</p>
 				<div class="footer-icons">
 					
-					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="https://www.linkedin.com/in/pr%C3%A9voyances-services/"><i class="fa fa-linkedin"></i></a>
 					
 				</div>
 			</div>
 		</footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 		
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+			  var form = document.querySelector('.contact1-form');
+			  form.addEventListener('submit', function(event) {
+				event.preventDefault(); // Empêche le formulaire de soumettre normalement
+		  
+				// Récupère les valeurs des champs du formulaire
+				var subject = document.querySelector('input[name="sujet"]').value;
+				var name = document.querySelector('input[name="name"]').value;
+				var email = document.querySelector('input[name="email"]').value;
+				var message = document.querySelector('textarea[name="message"]').value;
+				var phone = document.querySelector('input[name="telephone"]').value;
+		  
+				// Vérifiez si des champs sont vides
+				if (subject === '' || name === '' || email === '' || message === '' || phone === '') {
+				  Swal.fire('Erreur', 'Veuillez remplir tous les champs', 'error');
+				  return;
+				}
+		  
+				// Envoie les données du formulaire en utilisant AJAX
+				var xhr = new XMLHttpRequest();
+				xhr.open('POST', 'back/send_contact.php', true);
+				xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+				xhr.onreadystatechange = function() {
+				  if (xhr.readyState === XMLHttpRequest.DONE) {
+					if (xhr.status === 200) {
+					  Swal.fire('Succès', 'Le mail a été envoyé avec succès', 'success');
+					  form.reset(); // Réinitialise le formulaire après l'envoi
+					} if(xhr.status === 350){
+						Swal.fire('Erreur', 'Un email valide est requis (ex@abc.xyz)', 'error');
+					} if(xhr.status === 370){
+						Swal.fire('Erreur', 'Un numéro de téléphone valide est requis', 'error');
+					}
+				  }
+				};
+				xhr.send('submit=1&sujet=' + encodeURIComponent(subject) + '&name=' + encodeURIComponent(name) + '&email=' + encodeURIComponent(email) + '&message=' + encodeURIComponent(message) + '&telephone=' + encodeURIComponent(phone));
+			  });
+			});
+		  </script>
 	</body>
 	</html>
