@@ -1,5 +1,17 @@
 <?php
+
 if (isset($_POST['submit'])) {
+        $secret = "6Lf9QVsmAAAAALvLMXbsL_tQwgymgxc072G_DMHj";
+        $response = htmlspecialchars($_POST['g-recaptcha-response']);
+        $remoteip = $_SERVER['REMOTE_ADDR'];
+        $request = "https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$response&remoteip=$remoteip";
+
+        $get = file_get_contents($request);
+        $decode = json_decode($get, true);
+
+        if($decode['success']){
+
+        
         $to = 'devis@prevoyanceservices.fr';
         $subject = htmlentities($_POST['sujet'], ENT_QUOTES);
         $name = htmlentities($_POST['name'], ENT_QUOTES);
@@ -40,6 +52,10 @@ if (isset($_POST['submit'])) {
     } else {
         http_response_code(400); // Code de réponse HTTP 400 (Bad Request)
         exit; // Arrête l'exécution du script si la validation reCAPTCHA échoue.
-    }
+    }}
+        else 
+            echo "Error";
+
+       
 
 ?>
