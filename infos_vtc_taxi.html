@@ -68,7 +68,7 @@
                     <li>Les dommages matériels, qui concernent les biens détenus par les clients ou confiés au conducteur pour être transportés.</li>
 					</ul>
 				</div>
-
+			
 			<form class="contact1-form validate-form" method="POST" action="back/send_vtc_taxi.php">
 				<span class="contact1-form-title">
 					Devis VTC-TAXI
@@ -101,6 +101,7 @@
 							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 						</span>
 					</button>
+				</div>
 			</form>
 		</div>
 	</div>
@@ -201,7 +202,7 @@
 				}
 			  }
 			};
-			xhr.send('submit=1' + encodeURIComponent(subject) + '&name=' + encodeURIComponent(name) + '&email=' + encodeURIComponent(email) + '&message=' + encodeURIComponent(message) + '&telephone=' + encodeURIComponent(phone));
+			xhr.send('submit=1&name=' + encodeURIComponent(name) + '&email=' + encodeURIComponent(email) + '&message=' + encodeURIComponent(message) + '&telephone=' + encodeURIComponent(phone));
 		  });
 		});
 	  </script>

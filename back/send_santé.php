@@ -1,7 +1,7 @@
 <?php
 
 if (isset($_POST['submit'])) {
-    $to = 'contact@prevoyanceservices.com';
+    $to = 'devis@prevoyanceservices.fr';
     $subject = 'Devis santé';
     $name = htmlentities($_POST['name'], ENT_QUOTES);
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);

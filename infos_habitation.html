@@ -85,7 +85,7 @@
 				</div>
 				
 				<div class="wrap-input1 validate-input" data-validate = "Choisir votre sujet est requis ">
-					<input class="input1" type="text" name="sujet" placeholder="Sujet">
+					<input class="input1" type="text" name="telephone" placeholder="Téléphone">
 					<span class="shadow-input1"></span>
 				</div>
 				
@@ -207,7 +207,7 @@
 				}
 			  }
 			};
-			xhr.send('submit=1' + encodeURIComponent(subject) + '&name=' + encodeURIComponent(name) + '&email=' + encodeURIComponent(email) + '&message=' + encodeURIComponent(message) + '&telephone=' + encodeURIComponent(phone));
+			xhr.send('submit=1&name=' + encodeURIComponent(name) + '&email=' + encodeURIComponent(email) + '&message=' + encodeURIComponent(message) + '&telephone=' + encodeURIComponent(phone));
 		  });
 		});
 	  </script>
