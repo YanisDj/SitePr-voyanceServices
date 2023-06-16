@@ -75,6 +75,7 @@ to {
   transition: all 0.5s;
   font-weight : 650;
   top: 0; 
+  z-index: 9999999;
   
 }
 .navbar a {
@@ -105,6 +106,7 @@ column-gap: 10px;
 
 .link-item{
 padding: 10px;
+font-size: 1.15em;
 }
 
 .dropdown-menu {
@@ -145,7 +147,6 @@ width: 50px;
 }
 .menu-hamburger{
   display: block;
-  z-index: 99999;
 }
 
 
@@ -167,7 +168,6 @@ width: 50px;
     align-items: center;
     margin-left: -100%;
     transition: all 0.5s ease;
-    z-index: 9999;
   
 }
 
@@ -181,12 +181,13 @@ width: 50px;
 }
 
 .navbar .nav-links ul li {
-  margin: 15px 0;
-  font-size: 1.2em;
+  margin: 30px 0;
+  font-size: 1.3em;
   color: white;
   font-weight: bold;
 }
 }
+
 
   
   .hero-section{
